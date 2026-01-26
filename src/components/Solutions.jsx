@@ -101,13 +101,12 @@ export function Solutions() {
                                 transition: { delay: solution.delay, duration: 0.5 }
                             }}
                             viewport={{ once: true }}
-                            transition={{ duration: 0.3, ease: 'easeOut' }}
                             whileHover={{
                                 y: -5,
                                 scale: 1.01,
-                                transition: { duration: 0.2, delay: 0 }
+                                transition: { type: 'spring', stiffness: 300, damping: 20 }
                             }}
-                            className={`group relative flex flex-col w-full md:w-[calc(50%-1rem)] lg:w-[380px] p-8 bg-white/50 dark:bg-white/5 backdrop-blur-md border border-gray-200 dark:border-white/10 rounded-2xl transition-all duration-300 hover:shadow-2xl hover:shadow-${solution.baseColor}/20 hover:border-${solution.baseColor}/50`}
+                            className={`group relative flex flex-col w-full md:w-[calc(50%-1rem)] lg:w-[380px] p-8 bg-white/50 dark:bg-white/5 backdrop-blur-md border border-gray-200 dark:border-white/10 rounded-2xl transition-[box-shadow,border-color] duration-300 hover:shadow-2xl hover:shadow-${solution.baseColor}/20 hover:border-${solution.baseColor}/50`}
                         >
                             {/* Icon */}
                             <div className={`mb-6 p-3 rounded-xl bg-gray-50 dark:bg-white/5 w-fit ${solution.color}`}>
