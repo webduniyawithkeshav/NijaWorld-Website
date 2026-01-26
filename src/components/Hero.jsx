@@ -1,9 +1,10 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import { InteractiveDotGrid } from './InteractiveDotGrid';
 
 export function Hero() {
     return (
-        <section className="relative pt-32 pb-28 text-white overflow-hidden">
+        <section className="relative pt-24 pb-16 md:pt-32 md:pb-28 text-white overflow-hidden">
             {/* Interactive Dot Grid Background */}
             <InteractiveDotGrid />
 
@@ -38,12 +39,16 @@ export function Hero() {
                         transition={{ duration: 0.6, delay: 0.3 }}
                         className="mt-8 flex gap-4 flex-wrap pointer-events-auto"
                     >
-                        <button className="bg-nijaGreen hover:bg-green-500 transition text-white px-6 py-3 rounded-lg font-medium shadow-lg shadow-nijaGreen/30 hover:shadow-nijaGreen/50 hover:scale-105 transform">
-                            Join →
-                        </button>
-                        <button className="border border-white/20 hover:border-white hover:bg-white/10 transition px-6 py-3 rounded-lg backdrop-blur-sm">
-                            View Case Studies
-                        </button>
+                        <Link to="/join">
+                            <button className="bg-nijaGreen hover:bg-green-500 transition text-white px-6 py-3 rounded-lg font-medium shadow-lg shadow-nijaGreen/30 hover:shadow-nijaGreen/50 hover:scale-105 transform">
+                                Join →
+                            </button>
+                        </Link>
+                        <Link to="/case-studies">
+                            <button className="border border-white/20 hover:border-white hover:bg-white/10 transition px-6 py-3 rounded-lg backdrop-blur-sm">
+                                View Case Studies
+                            </button>
+                        </Link>
                     </motion.div>
                 </div>
 

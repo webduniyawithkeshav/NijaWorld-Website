@@ -10,6 +10,8 @@ import SolutionsPage from './pages/SolutionsPage';
 import CaseStudies from './pages/CaseStudies';
 import Insights from './pages/Insights';
 import Contact from './pages/Contact';
+import Join from './pages/Join';
+import Signup from './pages/Signup';
 
 function App() {
   const location = useLocation();
@@ -27,6 +29,8 @@ function App() {
         <Route path='/case-studies' element={<CaseStudies />} />
         <Route path='/insights' element={<Insights />} />
         <Route path='/contact' element={<Contact />} />
+        <Route path='/join' element={<Join />} />
+        <Route path='/signup' element={<Signup />} />
       </Routes>
     </AnimatePresence>
   );
