@@ -9,6 +9,7 @@ import Media from './pages/Media';
 import Partners from './pages/Partners';
 import Contact from './pages/Contact';
 import Join from './pages/Join';
+import Signup from './pages/Signup';
 
 export default function App() {
   return (
@@ -24,6 +25,7 @@ export default function App() {
         <Route path='/partners' element={<Partners />} />
         <Route path='/contact' element={<Contact />} />
         <Route path='/join' element={<Join />} />
+        <Route path='/signup' element={<Signup />} />
       </Routes>
     </BrowserRouter>
   );

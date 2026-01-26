@@ -105,7 +105,7 @@ export default function Contact() {
                                         </div>
                                         <div>
                                             <p className="text-sm text-gray-500 dark:text-gray-400">Email</p>
-                                            <p className="font-medium text-gray-900 dark:text-white">enterprise@nija.io</p>
+                                            <p className="font-medium text-gray-900 dark:text-white">reach@nija.world</p>
                                         </div>
                                     </div>
                                     <div className="flex items-center gap-3">
@@ -114,7 +114,7 @@ export default function Contact() {
                                         </div>
                                         <div>
                                             <p className="text-sm text-gray-500 dark:text-gray-400">Phone</p>
-                                            <p className="font-medium text-gray-900 dark:text-white">+1 (555) 123-4567</p>
+                                            <p className="font-medium text-gray-900 dark:text-white">+91 98450 38481</p>
                                         </div>
                                     </div>
                                 </div>
