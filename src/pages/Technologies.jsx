@@ -1,147 +1,166 @@
 import { motion } from 'framer-motion';
 import { Navbar } from '../components/Navbar';
 import { Footer } from '../components/Footer';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+
+import { AnimatedPageBackground } from '../components/AnimatedPageBackground';
+import aiWorkflowImg from '../assets/images/ai_workflow_vibrant.png';
+import blockchainImg from '../assets/images/blockchain_ledger_structure.png';
+import cyberImg from '../assets/images/cybersecurity_shield_layer.png';
 
 export default function Technologies() {
-    const aiTechnologies = [
-        {
-            name: 'AI for Digitisation',
-            description: 'Convert legacy documents, processes, and data into structured, searchable, and machine-readable systems.'
-        },
-        {
-            name: 'AI for Automation',
-            description: 'Reduce manual work using intelligent agents, workflows, and policy-driven automation.'
-        },
-        {
-            name: 'AI for Infrastructure',
-            description: 'Improve system reliability, observability, performance, and scalability across enterprise environments.'
-        },
-        {
-            name: 'AI for Cybersecurity',
-            description: 'Detect threats, prevent incidents, and accelerate response using intelligent monitoring and analysis.'
-        }
-    ];
-
-    const blockchainTechnologies = [
-        {
-            name: 'Tokenisation Frameworks',
-            description: 'Represent real-world assets and value digitally with governance and compliance controls.'
-        },
-        {
-            name: 'Provenance & Audit Trails',
-            description: 'Provide immutable traceability for transactions, data flows, and operational processes.'
-        },
-        {
-            name: 'Smart Contracts & Settlement',
-            description: 'Enable automated, verifiable business logic and secure settlement between parties.'
-        },
-        {
-            name: 'Identity Primitives',
-            description: 'Secure access, credentials, and identity verification across systems and organisations.'
-        }
-    ];
+    const navigate = useNavigate();
 
     return (
-        <div className='min-h-screen bg-white dark:bg-baseDark dark:text-white'>
+        <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.25, ease: "easeInOut" }}
+            className='min-h-screen relative'
+        >
+            <AnimatedPageBackground />
             <Navbar />
 
             {/* Hero Section */}
             <section className="pt-32 pb-20 bg-gradient-to-br from-[#0B0F14] via-[#141B28] to-[#0B0F14] text-white">
                 <div className="max-w-7xl mx-auto px-6">
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        className="max-w-3xl"
-                    >
-                        <h1 className="text-5xl font-bold mb-6">
+                    <div className="max-w-3xl">
+                        <motion.h1
+                            initial={{ opacity: 0, y: 10 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.4 }}
+                            className="text-5xl font-bold mb-6 font-heading"
+                        >
                             Technologies built for enterprise-scale trust
-                        </h1>
-                        <p className="text-xl text-gray-300 leading-relaxed">
-                            NIJA combines practical AI with blockchain-grade infrastructure to deliver secure,
+                        </motion.h1>
+                        <motion.p
+                            initial={{ opacity: 0 }}
+                            animate={{ opacity: 1 }}
+                            transition={{ duration: 0.4, delay: 0.1 }}
+                            className="text-xl text-gray-300 leading-relaxed font-body"
+                        >
+                            Nija combines practical AI with blockchain-grade infrastructure to deliver secure,
                             production-ready systems. Our technology stack is designed for enterprises that require
                             reliability, transparency, and scale.
-                        </p>
-                    </motion.div>
-                </div>
-            </section>
-
-            {/* AI Technologies Section */}
-            <section className="py-24 bg-white dark:bg-baseDark">
-                <div className="max-w-7xl mx-auto px-6">
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        className="mb-16"
-                    >
-                        <h2 className="text-4xl font-bold mb-4 text-gray-900 dark:text-white">
-                            Artificial Intelligence
-                        </h2>
-                        <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl">
-                            Our focus is on applied, production-grade AI rather than experimental models.
-                            We build AI systems that solve real business problems with measurable outcomes.
-                        </p>
-                    </motion.div>
-
-                    <div className="grid md:grid-cols-2 gap-6">
-                        {aiTechnologies.map((tech, idx) => (
-                            <motion.div
-                                key={idx}
-                                initial={{ opacity: 0, y: 30 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                viewport={{ once: true }}
-                                transition={{ delay: idx * 0.1 }}
-                                whileHover={{ y: -4 }}
-                                className="group bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl p-8 hover:border-nijaGreen dark:hover:border-nijaGreen transition-all duration-300"
-                            >
-                                <h3 className="text-xl font-bold mb-3 text-gray-900 dark:text-white group-hover:text-nijaGreen transition-colors">
-                                    {tech.name}
-                                </h3>
-                                <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                                    {tech.description}
-                                </p>
-                            </motion.div>
-                        ))}
+                        </motion.p>
                     </div>
                 </div>
             </section>
 
-            {/* Blockchain Technologies Section */}
-            <section className="py-24 bg-gray-50 dark:bg-[#0d1117]">
+            {/* Technologies Pillars Grid */}
+            <section className="py-24 relative z-10">
                 <div className="max-w-7xl mx-auto px-6">
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        className="mb-16"
-                    >
+                    <div className="mb-16">
                         <h2 className="text-4xl font-bold mb-4 text-gray-900 dark:text-white">
-                            Blockchain
+                            Core Technology Pillars
                         </h2>
                         <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl">
-                            We use blockchain as a trust and governance layer, not for speculative purposes.
-                            Our implementations focus on transparency, traceability, and verifiable business logic.
+                            Our platform is built on three foundational pillars that drive enterprise transformation.
                         </p>
-                    </motion.div>
+                    </div>
 
-                    <div className="grid md:grid-cols-2 gap-6">
-                        {blockchainTechnologies.map((tech, idx) => (
+                    <div className="grid lg:grid-cols-3 gap-8">
+                        {[
+                            {
+                                title: 'AI (Intelligence & Automation)',
+                                headline: 'AI to digitise, automate, and operationalise decision-making',
+                                capabilities: [
+                                    'Digitisation — Convert documents and legacy workflows into structured, usable data',
+                                    'Automation — Policy-driven workflow automation with human oversight',
+                                    'Infrastructure Intelligence — Reliability, observability, and operational optimisation'
+                                ],
+                                link: '/technologies/ai',
+                                cta: 'Explore AI Technologies',
+                                image: aiWorkflowImg
+                            },
+                            {
+                                title: 'Blockchain (Trust & Verifiable Systems)',
+                                headline: 'Blockchain for verifiable records and programmable settlement',
+                                capabilities: [
+                                    'Tokenisation — Asset/entitlement lifecycle with governance controls',
+                                    'Audit Trail & Provenance — Tamper-evident records across partners',
+                                    'Smart Contracts & Settlement — Automated, verifiable business logic',
+                                    'Identity & Access Primitives — Credential verification and permissioning foundations'
+                                ],
+                                link: '/technologies/blockchain',
+                                cta: 'Explore Blockchain',
+                                image: blockchainImg
+                            },
+                            {
+                                title: 'Cybersecurity (Risk & Governance)',
+                                headline: 'Security-first controls across identity, data, and operations',
+                                capabilities: [
+                                    'Threat Detection & Triage — Correlation and prioritisation of suspicious activity',
+                                    'Identity Security — Access governance, anomaly detection, and rapid revocation',
+                                    'Policy & Compliance Controls — Change management, audit evidence, reporting readiness',
+                                    'Incident Response Enablement — Playbooks, escalation workflows, post-incident review outputs'
+                                ],
+                                link: '/technologies/cybersecurity',
+                                cta: 'Explore Cybersecurity',
+                                image: cyberImg
+                            }
+                        ].map((pillar, idx) => (
                             <motion.div
                                 key={idx}
-                                initial={{ opacity: 0, y: 30 }}
+                                initial={{ opacity: 0, y: 12 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
-                                transition={{ delay: idx * 0.1 }}
-                                whileHover={{ y: -4 }}
-                                className="group bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl p-8 hover:border-nijaPurple dark:hover:border-nijaPurple transition-all duration-300"
+                                transition={{ duration: 0.4, delay: idx * 0.1 }}
+                                whileHover={{ y: -6, transition: { duration: 0.2 } }}
+                                className="group bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl p-8 hover:border-b-nijaGreen dark:hover:border-b-nijaGreen hover:shadow-2xl hover:shadow-nijaGreen/10 transition-all duration-200 flex flex-col h-full relative overflow-hidden"
                             >
-                                <h3 className="text-xl font-bold mb-3 text-gray-900 dark:text-white group-hover:text-nijaPurple transition-colors">
-                                    {tech.name}
+                                <div className="absolute top-0 right-0 w-32 h-32 bg-nijaGreen/5 rounded-full blur-3xl -mr-16 -mt-16 transition-opacity opacity-0 group-hover:opacity-100" />
+
+                                {pillar.image && (
+                                    <div className="mb-6 -mx-8 -mt-8 h-48 relative overflow-hidden rounded-t-xl group-hover:h-52 transition-all duration-300">
+                                        <div className="absolute inset-0 bg-gradient-to-t from-white dark:from-gray-900 via-transparent to-transparent z-10 opacity-80" />
+                                        <img
+                                            src={pillar.image}
+                                            alt={pillar.title}
+                                            className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                                        />
+                                    </div>
+                                )}
+
+                                <h3 className="text-xl font-bold mb-3 text-gray-900 dark:text-white relative z-10 group-hover:text-nijaGreen transition-colors">
+                                    {pillar.title}
                                 </h3>
-                                <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                                    {tech.description}
+                                <p className="text-gray-600 dark:text-gray-400 mb-6 font-medium relative z-10">
+                                    {pillar.headline}
                                 </p>
+
+                                <div className="flex-grow mb-8 relative z-10">
+                                    <h4 className="text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-500 mb-4">
+                                        Capabilities
+                                    </h4>
+                                    <ul className="space-y-3">
+                                        {pillar.capabilities.map((cap, cIdx) => (
+                                            <li key={cIdx} className="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-300">
+                                                <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-nijaGreen flex-shrink-0" />
+                                                <span>{cap}</span>
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
+
+                                <button
+                                    onClick={() => pillar.link && navigate(pillar.link)}
+                                    className="w-full py-3 rounded-lg border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white font-medium group-hover:bg-nijaGreen group-hover:text-white group-hover:border-transparent transition-all duration-200 relative z-10 flex items-center justify-center gap-2 group/btn"
+                                >
+                                    <span className="relative">
+                                        {pillar.cta}
+                                        <span className="absolute left-0 bottom-0 w-full h-[1px] bg-white transform scale-x-0 group-hover/btn:scale-x-100 transition-transform duration-200 origin-left" />
+                                    </span>
+                                    <svg
+                                        className="w-4 h-4 transform group-hover/btn:translate-x-1 transition-transform duration-200"
+                                        fill="none"
+                                        stroke="currentColor"
+                                        viewBox="0 0 24 24"
+                                    >
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                                    </svg>
+                                </button>
                             </motion.div>
                         ))}
                     </div>
@@ -157,16 +176,22 @@ export default function Technologies() {
                         viewport={{ once: true }}
                     >
                         <h2 className="text-3xl font-bold mb-8">
-                            Explore how NIJA technologies power real-world solutions
+                            Explore how Nija’s technology fits your enterprise
                         </h2>
                         <div className="flex flex-wrap gap-4 justify-center">
-                            <Link to="/solutions">
-                                <button className="bg-nijaGreen hover:bg-green-500 text-white px-8 py-4 rounded-lg font-medium transition shadow-lg shadow-nijaGreen/30 hover:shadow-nijaGreen/50">
-                                    View Solutions
+                            <div className="relative group">
+                                <motion.div
+                                    className="absolute inset-0 bg-nijaGreen rounded-lg blur-xl opacity-10 group-hover:opacity-20 transition-opacity duration-300"
+                                    initial={{ scale: 0.8 }}
+                                    whileHover={{ scale: 1.1 }}
+                                    transition={{ duration: 0.3 }}
+                                />
+                                <button className="relative z-10 bg-nijaGreen hover:bg-green-500 text-white px-8 py-4 rounded-lg font-medium transition shadow-lg shadow-nijaGreen/30 hover:shadow-nijaGreen/50">
+                                    Request a Demo
                                 </button>
-                            </Link>
+                            </div>
                             <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-medium transition hover:bg-white/10">
-                                Request a Demo
+                                Talk to a Solutions Architect
                             </button>
                         </div>
                     </motion.div>
@@ -174,6 +199,6 @@ export default function Technologies() {
             </section>
 
             <Footer />
-        </div>
+        </motion.div>
     );
 }

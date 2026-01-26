@@ -1,45 +1,37 @@
 import { motion } from 'framer-motion';
 import { Navbar } from '../components/Navbar';
 import { Footer } from '../components/Footer';
-
 import { AnimatedPageBackground } from '../components/AnimatedPageBackground';
 import tokenisationImg from '../assets/images/blockchain/tokenisation.png';
 import auditImg from '../assets/images/blockchain/audit.png';
-import identityImg from '../assets/images/cybersecurity/identity.png';
-import infrastructureImg from '../assets/images/ai/infrastructure.png';
-import automationImg from '../assets/images/ai/automation.png';
+import smartContractsImg from '../assets/images/blockchain/smart_contracts.png';
+import identityImg from '../assets/images/blockchain/identity.png';
 
-export default function SolutionsPage() {
-    const solutions = [
+export default function BlockchainPage() {
+    const blockchainTechnologies = [
         {
-            title: 'Tokenisation',
-            outcome: 'Launch compliant tokenised assets and workflows',
-            bullets: ['Governance controls', 'Issuance & lifecycle', 'Reporting & auditability'],
+            name: 'Tokenisation',
+            description: 'Asset/entitlement lifecycle with governance controls',
+            features: ['Asset Digitisation', 'Lifecycle Mgmt', 'Governance Rules'],
             image: tokenisationImg
         },
         {
-            title: 'Supply Chain Solution',
-            outcome: 'Improve visibility and reduce disputes with end-to-end traceability',
-            bullets: ['Provenance ledger', 'Event tracking', 'Partner reconciliation'],
+            name: 'Audit Trail & Provenance',
+            description: 'Tamper-evident records across partners',
+            features: ['Immutable Ledger', 'Multi-party Verify', 'History Tracking'],
             image: auditImg
         },
         {
-            title: 'Identity Management',
-            outcome: 'Secure identity and access with verifiable credentials',
-            bullets: ['KYC/KYB-ready', 'Role-based control', 'Fraud reduction'],
+            name: 'Smart Contracts & Settlement',
+            description: 'Automated, verifiable business logic',
+            features: ['Auto-Execution', 'Trustless Settlement', 'Logic Documentation'],
+            image: smartContractsImg
+        },
+        {
+            name: 'Identity & Access Primitives',
+            description: 'Credential verification and permissioning foundations',
+            features: ['DID Standards', 'Verifiable Creds', 'Access Control'],
             image: identityImg
-        },
-        {
-            title: 'Loyalty Solution',
-            outcome: 'Build modern loyalty programs with transparent rewards and engagement',
-            bullets: ['Token-based rewards', 'Personalisation', 'Analytics & controls'],
-            image: automationImg
-        },
-        {
-            title: 'Digital Assets Investment Advisory',
-            outcome: 'Institutional-grade advisory and strategy for digital asset exposure',
-            bullets: ['Risk framework', 'Governance', 'Reporting-ready outputs'],
-            image: infrastructureImg
         }
     ];
 
@@ -64,7 +56,7 @@ export default function SolutionsPage() {
                             transition={{ duration: 0.4 }}
                             className="text-5xl font-bold mb-6 font-heading"
                         >
-                            Solutions designed for enterprise deployment
+                            Blockchain Infrastructure
                         </motion.h1>
                         <motion.p
                             initial={{ opacity: 0 }}
@@ -72,17 +64,17 @@ export default function SolutionsPage() {
                             transition={{ duration: 0.4, delay: 0.1 }}
                             className="text-xl text-gray-300 leading-relaxed font-body"
                         >
-                            Practical implementations that integrate with existing systems and governance models.
+                            Secure, immutable ledger technology designed for enterprise trust, governance, and verifiable business logic.
                         </motion.p>
                     </div>
                 </div>
             </section>
 
-            {/* Solutions Grid */}
+            {/* Technologies Grid */}
             <section className="py-24 relative z-10">
-                <div className="max-w-7xl mx-auto px-6">
-                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        {solutions.map((solution, idx) => (
+                <div className="max-w-4xl mx-auto px-6">
+                    <div className="grid md:grid-cols-2 gap-20">
+                        {blockchainTechnologies.map((tech, idx) => (
                             <motion.div
                                 key={idx}
                                 initial={{ opacity: 0, y: 12 }}
@@ -90,35 +82,41 @@ export default function SolutionsPage() {
                                 viewport={{ once: true }}
                                 transition={{ duration: 0.4, delay: idx * 0.07 }}
                                 whileHover={{ y: -6, transition: { duration: 0.2 } }}
-                                className="group bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl p-6 hover:border-b-nijaGreen dark:hover:border-b-nijaGreen hover:shadow-2xl hover:shadow-nijaGreen/10 transition-all duration-200 cursor-pointer relative overflow-hidden"
+                                className="group bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-[#0B0F14] border border-gray-200 dark:border-gray-800 rounded-xl p-6 hover:border-b-nijaPurple dark:hover:border-b-nijaPurple hover:shadow-2xl hover:shadow-nijaPurple/10 transition-all duration-200 flex flex-col h-full relative overflow-hidden"
                             >
-                                <div className="absolute top-0 right-0 w-32 h-32 bg-nijaGreen/5 rounded-full blur-3xl -mr-16 -mt-16 transition-opacity opacity-0 group-hover:opacity-100" />
+                                <div className="absolute top-0 right-0 w-32 h-32 bg-nijaPurple/5 rounded-full blur-3xl -mr-16 -mt-16 transition-opacity opacity-0 group-hover:opacity-100" />
 
-                                {solution.image && (
+                                {tech.image && (
                                     <div className="mb-6 -mx-6 -mt-6 h-40 relative overflow-hidden rounded-t-xl group-hover:h-44 transition-all duration-300">
                                         <div className="absolute inset-0 bg-gradient-to-t from-white dark:from-gray-900 via-transparent to-transparent z-10 opacity-80" />
                                         <img
-                                            src={solution.image}
-                                            alt={solution.title}
+                                            src={tech.image}
+                                            alt={tech.name}
                                             className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
                                         />
                                     </div>
                                 )}
 
-                                <h3 className="text-xl font-bold mb-3 text-gray-900 dark:text-white group-hover:text-nijaGreen transition-colors relative z-10">
-                                    {solution.title}
+                                <h3 className="text-xl font-bold mb-3 text-gray-900 dark:text-white group-hover:text-nijaPurple transition-colors relative z-10">
+                                    {tech.name}
                                 </h3>
-                                <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed relative z-10">
-                                    <span className="font-semibold text-gray-900 dark:text-gray-200">Outcome:</span> {solution.outcome}
+                                <p className="text-gray-600 dark:text-gray-400 mb-6 font-medium leading-relaxed relative z-10">
+                                    {tech.description}
                                 </p>
-                                <ul className="space-y-2 relative z-10">
-                                    {solution.bullets.map((bullet, bIdx) => (
-                                        <li key={bIdx} className="flex items-start gap-2 text-sm text-gray-500 dark:text-gray-400">
-                                            <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-nijaGreen" />
-                                            {bullet}
-                                        </li>
-                                    ))}
-                                </ul>
+
+                                <div className="mt-auto relative z-10">
+                                    <h4 className="text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-500 mb-3">
+                                        Key Features
+                                    </h4>
+                                    <ul className="space-y-2">
+                                        {tech.features.map((feat, fIdx) => (
+                                            <li key={fIdx} className="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-300">
+                                                <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-nijaPurple" />
+                                                {feat}
+                                            </li>
+                                        ))}
+                                    </ul>
+                                </div>
                             </motion.div>
                         ))}
                     </div>
@@ -133,12 +131,9 @@ export default function SolutionsPage() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                     >
-                        <h2 className="text-3xl font-bold mb-4 font-heading">
-                            Discuss your use case with Nija
+                        <h2 className="text-3xl font-bold mb-8">
+                            Ready to implement secure blockchain solutions?
                         </h2>
-                        <p className="text-gray-300 mb-8 max-w-2xl mx-auto font-body">
-                            Get a tailored walkthrough, architecture approach, and implementation plan.
-                        </p>
                         <div className="flex flex-wrap gap-4 justify-center">
                             <div className="relative group">
                                 <motion.div
@@ -152,7 +147,7 @@ export default function SolutionsPage() {
                                 </button>
                             </div>
                             <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-medium transition hover:bg-white/10">
-                                Contact Us
+                                Talk to a Solutions Architect
                             </button>
                         </div>
                     </motion.div>

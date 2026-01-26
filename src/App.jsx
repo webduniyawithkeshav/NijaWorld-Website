@@ -1,32 +1,39 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { AnimatePresence } from 'framer-motion';
+import { Routes, Route, useLocation } from 'react-router-dom';
 import Home from './pages/Home';
 import About from './pages/About';
 import Technologies from './pages/Technologies';
+import AIPage from './pages/AIPage';
+import BlockchainPage from './pages/BlockchainPage';
+import CybersecurityPage from './pages/CybersecurityPage';
 import SolutionsPage from './pages/SolutionsPage';
 import CaseStudies from './pages/CaseStudies';
 import Insights from './pages/Insights';
-import Media from './pages/Media';
-import Partners from './pages/Partners';
 import Contact from './pages/Contact';
 import Join from './pages/Join';
 import Signup from './pages/Signup';
 
-export default function App() {
+function App() {
+  const location = useLocation();
+
   return (
-    <BrowserRouter>
-      <Routes>
+    <AnimatePresence mode='wait'>
+      <Routes location={location} key={location.pathname}>
         <Route path='/' element={<Home />} />
         <Route path='/about' element={<About />} />
         <Route path='/technologies' element={<Technologies />} />
+        <Route path='/technologies/ai' element={<AIPage />} />
+        <Route path='/technologies/blockchain' element={<BlockchainPage />} />
+        <Route path='/technologies/cybersecurity' element={<CybersecurityPage />} />
         <Route path='/solutions' element={<SolutionsPage />} />
         <Route path='/case-studies' element={<CaseStudies />} />
         <Route path='/insights' element={<Insights />} />
-        <Route path='/media' element={<Media />} />
-        <Route path='/partners' element={<Partners />} />
         <Route path='/contact' element={<Contact />} />
         <Route path='/join' element={<Join />} />
         <Route path='/signup' element={<Signup />} />
       </Routes>
-    </BrowserRouter>
+    </AnimatePresence>
   );
 }
+
+export default App;
