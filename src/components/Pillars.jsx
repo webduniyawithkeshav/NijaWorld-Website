@@ -74,7 +74,7 @@ export function Pillars() {
                         transition={{ delay: 0.5, duration: 0.6, ease: "easeInOut" }}
                         className="inline-block mb-10 px-6 py-3 text-2xl rounded-full bg-nijaGreen/20 text-white font-bold border-2 border-white"
                     >
-                        THREE ENTERPRISE PILLARS
+                        Three Enterprise Pillars
                     </motion.span>
                     <motion.h2
                         initial={{ opacity: 0.5, y: 50 }}
@@ -126,25 +126,28 @@ export function Pillars() {
                                         }}
                                         className={`bg-gradient-to-br ${pillar.gradient} dark:bg-gradient-to-br dark:${pillar.gradient} border border-${pillar.color}/20 dark:border-${pillar.color}/30 rounded-2xl p-6 hover:shadow-2xl hover:shadow-${pillar.color}/20 transition-all duration-300 h-full flex flex-col justify-between`}
                                     >
-                                        {/* Icon & Title */}
-                                        <div className="mb-4">
-                                            <div className="text-5xl mb-2">
+                                        {/* Icon & Title Row */}
+                                        <div className="flex items-center gap-4 mb-4">
+                                            <div className="flex-shrink-0">
                                                 <img
                                                     src={pillar.icon}
                                                     alt={pillar.title}
-                                                    className="w-16 h-16 object-contain"
+                                                    className="w-14 h-14 object-contain"
                                                 />
                                             </div>
-                                            <h3 className={`text-2xl font-bold mb-1 text-${pillar.color}`}>
-                                                {pillar.title}
-                                            </h3>
-                                            <p className="text-sm text-gray-500 dark:text-gray-400 font-medium">
-                                                {pillar.subtitle}
-                                            </p>
+                                            <div>
+                                                <h3 className={`text-2xl font-bold mb-1 ${pillar.color === 'nijaPurple' ? 'text-nijaPurple' : 'text-nijaGreen'
+                                                    }`}>
+                                                    {pillar.title}
+                                                </h3>
+                                                <p className="text-sm text-gray-500 dark:text-gray-400 font-medium">
+                                                    {pillar.subtitle}
+                                                </p>
+                                            </div>
                                         </div>
 
-                                        {/* Description */}
-                                        <p className="text-gray-700 dark:text-gray-300 mb-2 text-left text-[15px] leading-relaxed">
+                                        {/* Description - Fixed height for consistency */}
+                                        <p className="text-gray-700 dark:text-gray-300 mb-4 text-[15px] leading-relaxed min-h-[100px]">
                                             {pillar.description}
                                         </p>
 
@@ -223,7 +226,10 @@ export function Pillars() {
                                             whileInView={{ opacity: 1 }}
                                             viewport={{ once: true }}
                                             transition={{ delay: 1.5 }}
-                                            className={`mt-8 w-full px-6 py-3 rounded-lg font-medium transition-all bg-${pillar.color}/10 hover:bg-${pillar.color} text-${pillar.color} hover:text-white border border-${pillar.color}/30 hover:shadow-lg hover:shadow-${pillar.color}/50`}
+                                            className={`mt-8 w-full px-6 py-3 rounded-lg font-medium transition-all hover:text-white hover:shadow-lg ${pillar.color === 'nijaPurple'
+                                                ? 'bg-nijaPurple/10 hover:bg-nijaPurple text-nijaPurple border border-nijaPurple/30 hover:shadow-nijaPurple/50'
+                                                : 'bg-nijaGreen/10 hover:bg-nijaGreen text-nijaGreen border border-nijaGreen/30 hover:shadow-nijaGreen/50'
+                                                }`}
                                         >
                                             Explore {pillar.title} →
                                         </motion.button>
@@ -245,25 +251,28 @@ export function Pillars() {
                                     whileHover={{ scale: 1.02 }}
                                     className={`bg-gradient-to-br ${pillar.gradient} dark:bg-gradient-to-br dark:${pillar.gradient} border border-${pillar.color}/20 dark:border-${pillar.color}/30 rounded-2xl p-8 hover:shadow-2xl hover:shadow-${pillar.color}/20 transition-all duration-300 cursor-pointer group`}
                                 >
-                                    {/* Icon & Title */}
-                                    <div className="mb-6">
-                                        <div className="text-5xl mb-4 group-hover:scale-110 transition-transform duration-300">
+                                    {/* Icon & Title Row */}
+                                    <div className="flex items-center gap-4 mb-4">
+                                        <div className="flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
                                             <img
                                                 src={pillar.icon}
                                                 alt={pillar.title}
-                                                className="w-16 h-16 object-contain"
+                                                className="w-14 h-14 object-contain"
                                             />
                                         </div>
-                                        <h3 className={`text-2xl font-bold mb-1 text-${pillar.color}`}>
-                                            {pillar.title}
-                                        </h3>
-                                        <p className="text-sm text-gray-500 dark:text-gray-400 font-medium">
-                                            {pillar.subtitle}
-                                        </p>
+                                        <div>
+                                            <h3 className={`text-2xl font-bold mb-1 ${pillar.color === 'nijaPurple' ? 'text-nijaPurple' : 'text-nijaGreen'
+                                                }`}>
+                                                {pillar.title}
+                                            </h3>
+                                            <p className="text-sm text-gray-500 dark:text-gray-400 font-medium">
+                                                {pillar.subtitle}
+                                            </p>
+                                        </div>
                                     </div>
 
-                                    {/* Description */}
-                                    <p className="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed">
+                                    {/* Description - Fixed height for consistency */}
+                                    <p className="text-gray-700 dark:text-gray-300 mb-6 leading-relaxed min-h-[100px]">
                                         {pillar.description}
                                     </p>
 
@@ -296,7 +305,10 @@ export function Pillars() {
                                         whileInView={{ opacity: 1 }}
                                         viewport={{ once: true }}
                                         transition={{ delay: 1.5 }}
-                                        className={`mt-8 w-full px-6 py-3 rounded-lg font-medium transition-all bg-${pillar.color}/10 hover:bg-${pillar.color} text-${pillar.color} hover:text-white border border-${pillar.color}/30 hover:shadow-lg hover:shadow-${pillar.color}/50`}
+                                        className={`mt-8 w-full px-6 py-3 rounded-lg font-medium transition-all hover:text-white hover:shadow-lg ${pillar.color === 'nijaPurple'
+                                            ? 'bg-nijaPurple/10 hover:bg-nijaPurple text-nijaPurple border border-nijaPurple/30 hover:shadow-nijaPurple/50'
+                                            : 'bg-nijaGreen/10 hover:bg-nijaGreen text-nijaGreen border border-nijaGreen/30 hover:shadow-nijaGreen/50'
+                                            }`}
                                     >
                                         Explore {pillar.title} →
                                     </motion.button>

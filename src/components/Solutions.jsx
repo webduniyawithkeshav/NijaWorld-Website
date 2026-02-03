@@ -5,6 +5,7 @@ import {
     ShieldCheck,
     Award,
     TrendingUp,
+    Wallet,
     ArrowRight
 } from 'lucide-react';
 
@@ -64,11 +65,22 @@ export function Solutions() {
             bulletColor: 'bg-nijaGreen',
             cta: 'Explore Advisory',
             delay: 0.4
+        },
+        {
+            title: 'RWA Liquidity',
+            description: 'Enable compliant liquidity infrastructure for tokenised real-world assets.',
+            bullets: ['Issuance workflows', 'Eligibility controls', 'Settlement mechanics'],
+            icon: Wallet,
+            color: 'text-nijaGreen',
+            baseColor: 'nijaGreen',
+            bulletColor: 'bg-nijaGreen',
+            cta: 'Explore RWA Liquidity',
+            delay: 0.5
         }
     ];
 
     return (
-        <section className="py-16 md:py-24 bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-baseDark overflow-hidden">
+        <section className="pt-4 pb-16 md:pt-6 md:pb-24 bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-baseDark overflow-hidden">
             <div className="max-w-7xl mx-auto px-6">
 
                 {/* Header */}
@@ -76,10 +88,10 @@ export function Solutions() {
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="text-center mb-20"
+                    className="text-center mb-8"
                 >
-                    <span className="inline-block mb-6 px-8 py-3 text-2xl rounded-full bg-nijaPurple/10 text-nijaPurple font-bold tracking-wide border border-nijaPurple/20">
-                        INDUSTRY SOLUTIONS
+                    <span className="inline-block mb-6 px-8 py-3 text-2xl rounded-full bg-nijaGreen/10 text-nijaGreen font-bold tracking-wide border border-nijaGreen/20">
+                        Industry Solutions
                     </span>
                     <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
                         Solutions designed for enterprise deployment
@@ -108,15 +120,15 @@ export function Solutions() {
                             }}
                             className={`group relative flex flex-col w-full md:w-[calc(50%-1rem)] lg:w-[380px] p-8 bg-white/50 dark:bg-white/5 backdrop-blur-md border border-gray-200 dark:border-white/10 rounded-2xl transition-[box-shadow,border-color] duration-300 hover:shadow-2xl hover:shadow-${solution.baseColor}/20 hover:border-${solution.baseColor}/50`}
                         >
-                            {/* Icon */}
-                            <div className={`mb-6 p-3 rounded-xl bg-gray-50 dark:bg-white/5 w-fit ${solution.color}`}>
-                                <solution.icon size={32} strokeWidth={1.5} />
+                            {/* Icon & Title Row */}
+                            <div className="flex items-center gap-4 mb-6">
+                                <div className={`p-3 rounded-xl bg-gray-50 dark:bg-white/5 w-fit flex-shrink-0 ${solution.color}`}>
+                                    <solution.icon size={32} strokeWidth={1.5} />
+                                </div>
+                                <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
+                                    {solution.title}
+                                </h3>
                             </div>
-
-                            {/* Title */}
-                            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">
-                                {solution.title}
-                            </h3>
 
                             {/* Description */}
                             <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed min-h-[50px]">
@@ -150,7 +162,7 @@ export function Solutions() {
                     viewport={{ once: true }}
                     className="text-center"
                 >
-                    <button className="px-8 py-3 rounded-full border border-gray-300 dark:border-white/20 text-gray-900 dark:text-white font-medium hover:bg-gray-100 dark:hover:bg-white/10 hover:border-nijaPurple/50 hover:shadow-lg hover:shadow-nijaPurple/20 transition-all duration-300">
+                    <button className="px-8 py-3 rounded-full border border-nijaGreen text-nijaGreen font-medium hover:bg-nijaGreen hover:text-white hover:shadow-lg hover:shadow-nijaGreen/30 transition-all duration-300">
                         View All Solutions →
                     </button>
                 </motion.div>
