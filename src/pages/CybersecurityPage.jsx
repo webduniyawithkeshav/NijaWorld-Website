@@ -100,7 +100,7 @@ export default function CybersecurityPage() {
                                     viewport={{ once: true }}
                                     transition={{ duration: 0.4, delay: idx * 0.07 }}
                                     whileHover={{ y: -6, transition: { duration: 0.2 } }}
-                                    className="bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-[#0B0F14] border border-gray-200 dark:border-gray-800 rounded-xl p-6 hover:border-b-nijaGreen dark:hover:border-b-nijaGreen hover:shadow-2xl hover:shadow-nijaGreen/10 transition-all duration-200 flex flex-col h-full relative overflow-hidden"
+                                    className="bg-gradient-to-b from-white to-gray-50 dark:from-gray-900 dark:to-[#0B0F14] border border-gray-200 dark:border-gray-800 rounded-xl p-6 hover:border-nijaGreen dark:hover:border-nijaGreen hover:shadow-2xl hover:shadow-nijaGreen/10 transition-all duration-200 flex flex-col h-full relative overflow-hidden"
                                 >
                                     <div className="absolute top-0 right-0 w-32 h-32 bg-nijaGreen/5 rounded-full blur-3xl -mr-16 -mt-16 transition-opacity opacity-0 group-hover:opacity-100" />
 

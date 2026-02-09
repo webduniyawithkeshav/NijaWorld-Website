@@ -5,6 +5,7 @@ import { Link, useNavigate } from 'react-router-dom';
 
 import { AnimatedPageBackground } from '../components/AnimatedPageBackground';
 import aiWorkflowImg from '../assets/images/ai_workflow_vibrant.png';
+import technologiesRecBgImg from '../assets/Gemini_Generated_Image_e7kv2we7kv2we7kv.png';
 import blockchainImg from '../assets/images/blockchain_ledger_structure.png';
 import cyberImg from '../assets/images/cybersecurity_shield_layer.png';
 
@@ -26,11 +27,11 @@ export default function Technologies() {
             <section className="relative pt-32 pb-20 overflow-hidden">
                 <div className="absolute inset-0 z-0">
                     <img
-                        src={aiWorkflowImg}
+                        src={technologiesRecBgImg}
                         alt="Technologies Background"
-                        className="w-full h-full object-cover opacity-80"
+                        className="w-full h-full object-cover opacity-100"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-br from-[#0B0F14] via-[#141B28]/90 to-[#0B0F14]" />
+                    <div className="absolute inset-0 bg-gradient-to-br from-[#0B0F14]/50 via-[#141B28]/20 to-[#0B0F14]/50" />
                 </div>
 
                 <div className="relative z-10 max-w-7xl mx-auto px-6">
@@ -118,8 +119,8 @@ export default function Technologies() {
                                 transition={{ duration: 0.4, delay: idx * 0.1 }}
                                 whileHover={{ y: -6, transition: { duration: 0.2 } }}
                                 className={`group bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl p-8 hover:shadow-2xl transition-all duration-200 flex flex-col h-full relative overflow-hidden ${idx === 1
-                                        ? 'hover:border-b-nijaPurple dark:hover:border-b-nijaPurple hover:shadow-nijaPurple/10'
-                                        : 'hover:border-b-nijaGreen dark:hover:border-b-nijaGreen hover:shadow-nijaGreen/10'
+                                    ? 'hover:border-nijaPurple dark:hover:border-nijaPurple hover:shadow-nijaPurple/10'
+                                    : 'hover:border-nijaGreen dark:hover:border-nijaGreen hover:shadow-nijaGreen/10'
                                     }`}
                             >
                                 <div className={`absolute top-0 right-0 w-32 h-32 rounded-full blur-3xl -mr-16 -mt-16 transition-opacity opacity-0 group-hover:opacity-100 ${idx === 1 ? 'bg-nijaPurple/5' : 'bg-nijaGreen/5'
