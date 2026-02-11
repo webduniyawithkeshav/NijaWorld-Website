@@ -119,11 +119,11 @@ export default function SolutionsPage() {
                                     viewport={{ once: true }}
                                     transition={{ duration: 0.4, delay: idx * 0.07 }}
                                     whileHover={{ y: -6, transition: { duration: 0.2 } }}
-                                    className="h-full"
+                                    className="h-full transform-gpu"
                                 >
                                     <CardWrapper
                                         {...cardProps}
-                                        className="block h-full group bg-gradient-to-br from-white to-gray-50 dark:from-gray-900 dark:to-gray-900 border-2 border-gray-200 dark:border dark:border-gray-800 rounded-xl p-6 hover:border-nijaGreen dark:hover:border-nijaGreen shadow-lg shadow-gray-200/50 hover:shadow-xl hover:shadow-nijaGreen/30 dark:shadow-none transition-all duration-200 cursor-pointer relative overflow-hidden"
+                                        className="flex flex-col h-full group bg-gradient-to-br from-white to-gray-50 dark:from-gray-900 dark:to-gray-900 border-2 border-gray-300/80 dark:border dark:border-gray-700/50 rounded-xl p-6 hover:border-nijaGreen dark:hover:border-nijaGreen shadow-[0_4px_12px_rgba(0,0,0,0.05)] hover:shadow-xl hover:shadow-nijaGreen/20 dark:shadow-none transition-[border-color,box-shadow,transform] duration-200 cursor-pointer relative overflow-hidden antialiased"
                                     >
                                         <div className="absolute top-0 right-0 w-32 h-32 hidden dark:block bg-nijaGreen/5 rounded-full blur-3xl -mr-16 -mt-16 transition-opacity opacity-0 group-hover:opacity-100" />
 
@@ -153,9 +153,9 @@ export default function SolutionsPage() {
                                             ))}
                                         </ul>
                                         {solution.link && (
-                                            <div className="mt-6 relative z-10">
-                                                <button className="w-full bg-nijaGreen hover:bg-green-600 text-white py-2.5 px-4 rounded-lg font-semibold transition-all duration-200 text-sm flex items-center justify-center gap-2 shadow-md shadow-nijaGreen/20 hover:shadow-lg hover:shadow-nijaGreen/30">
-                                                    Explore Solution
+                                            <div className="mt-auto pt-6 relative z-10">
+                                                <button className="w-full bg-transparent border-2 border-nijaGreen/30 dark:border-nijaGreen/20 text-gray-900 dark:text-gray-100 hover:bg-nijaGreen hover:text-white hover:border-nijaGreen py-2.5 px-4 rounded-lg font-semibold transition-all duration-200 text-sm flex items-center justify-center gap-2 shadow-sm hover:shadow-lg hover:shadow-nijaGreen/30 transform-gpu">
+                                                    Explore {solution.title === 'Digital Assets Investment Advisory' ? 'Digital Assets' : solution.title}
                                                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                                                     </svg>
@@ -200,7 +200,7 @@ export default function SolutionsPage() {
                                             <span>End-to-end solutions</span>
                                         </li>
                                     </ul>
-                                    <button className="bg-nijaGreen hover:bg-green-500 text-white px-5 py-2.5 rounded-lg text-sm font-medium transition shadow-lg shadow-nijaGreen/30 hover:shadow-nijaGreen/50 hover:scale-105 transform">
+                                    <button className="bg-transparent border-2 border-nijaGreen/30 dark:border-nijaGreen/20 text-gray-900 dark:text-gray-100 hover:bg-nijaGreen hover:text-white hover:border-nijaGreen px-5 py-2.5 rounded-lg text-sm font-medium transition-all duration-200 shadow-sm hover:shadow-lg hover:shadow-nijaGreen/30 hover:scale-105 transform">
                                         Explore Ecosystem →
                                     </button>
                                 </div>
