@@ -200,9 +200,12 @@ export default function SolutionsPage() {
                                             <span>End-to-end solutions</span>
                                         </li>
                                     </ul>
-                                    <button className="bg-transparent border-2 border-nijaGreen/30 dark:border-nijaGreen/20 text-gray-900 dark:text-gray-100 hover:bg-nijaGreen hover:text-white hover:border-nijaGreen px-5 py-2.5 rounded-lg text-sm font-medium transition-all duration-200 shadow-sm hover:shadow-lg hover:shadow-nijaGreen/30 hover:scale-105 transform">
+                                    <Link
+                                        to="/ecosystem"
+                                        className="inline-block bg-transparent border-2 border-nijaGreen/30 dark:border-nijaGreen/20 text-gray-900 dark:text-gray-100 hover:bg-nijaGreen hover:text-white hover:border-nijaGreen px-5 py-2.5 rounded-lg text-sm font-medium transition-all duration-200 shadow-sm hover:shadow-lg hover:shadow-nijaGreen/30 hover:scale-105 transform"
+                                    >
                                         Explore Ecosystem →
-                                    </button>
+                                    </Link>
                                 </div>
 
                                 {/* Image */}

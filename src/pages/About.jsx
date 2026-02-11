@@ -12,9 +12,9 @@ export default function About() {
 
             {/* Hero Section - Get to Know */}
             <section className="pt-32 pb-10 bg-gradient-to-br from-gray-50 to-white dark:from-baseDark dark:to-gray-900">
-                <div className="max-w-7xl mx-auto px-6">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6">
                     {/* Top Section - Images + Content */}
-                    <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
+                    <div className="grid lg:grid-cols-2 gap-8 md:gap-16 items-center mb-12 md:mb-20">
                         {/* Left Side - Layered Image Composition */}
                         <motion.div
                             initial={{ opacity: 0, x: -30 }}
@@ -61,12 +61,12 @@ export default function About() {
                             </span>
 
                             {/* Main Heading */}
-                            <h1 className="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white mb-8 leading-tight">
+                            <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6 md:mb-8 leading-tight">
                                 Nija Venture Impacts: Creating Wealth and Shared Value in the Distributed Economy
                             </h1>
 
                             {/* Body Content */}
-                            <div className="space-y-6 text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+                            <div className="space-y-4 md:space-y-6 text-base md:text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
                                 <p>
                                     Nija Venture Impacts is a distributed economy company that is committed to creating wealth and shared value with all stakeholders. We believe that the distributed economy has the potential to revolutionize the way we create, distribute, and share value. By using blockchain technology and tokenization, we can create more transparent, efficient, and equitable systems.
                                 </p>
@@ -85,11 +85,11 @@ export default function About() {
                         transition={{ delay: 0.4 }}
                         className="max-w-5xl"
                     >
-                        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-8">
+                        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900 dark:text-white mb-6 md:mb-8">
                             Our Services:
                         </h2>
 
-                        <div className="space-y-6">
+                        <div className="space-y-4 md:space-y-6">
                             {[
                                 'We help businesses to scale faster and create higher value by leveraging the distributed economy.',
                                 'We help individuals and communities to build social and economic ecosystems that are sustainable and digital.',
@@ -116,16 +116,16 @@ export default function About() {
             </section>
 
             {/* Accordion Section - Team, Vision, Contact */}
-            <section className="py-24 bg-gray-50 dark:bg-[#0d1117]">
-                <div className="max-w-7xl mx-auto px-6">
-                    <div className="grid lg:grid-cols-2 gap-16 items-start">
+            <section className="py-16 md:py-24 bg-gray-50 dark:bg-[#0d1117]">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6">
+                    <div className="grid lg:grid-cols-2 gap-8 md:gap-16 items-start">
                         {/* Left Side - Team Discussion Image */}
                         <motion.div
                             initial={{ opacity: 0, x: -30 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.6 }}
-                            className="relative h-[500px] lg:sticky lg:top-8"
+                            className="relative h-[300px] md:h-[500px] lg:sticky lg:top-8 hidden md:block"
                         >
                             <div className="rounded-2xl overflow-hidden shadow-xl h-full">
                                 <img
@@ -145,7 +145,7 @@ export default function About() {
                                 viewport={{ once: true }}
                                 className="mb-8"
                             >
-                                <h2 className="text-4xl font-bold mb-4 text-gray-900 dark:text-white">
+                                <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 text-gray-900 dark:text-white">
                                     Learn More About Us
                                 </h2>
                                 <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl">
@@ -181,9 +181,9 @@ export default function About() {
                                         {/* Accordion Header */}
                                         <button
                                             onClick={() => setOpenAccordion(openAccordion === idx ? -1 : idx)}
-                                            className="w-full flex items-center justify-between p-8 text-left transition-colors"
+                                            className="w-full flex items-center justify-between p-4 sm:p-6 md:p-8 text-left transition-colors"
                                         >
-                                            <h3 className="text-xl font-bold text-gray-900 dark:text-white group-hover:text-nijaGreen transition-colors">
+                                            <h3 className="text-lg md:text-xl font-bold text-gray-900 dark:text-white group-hover:text-nijaGreen transition-colors">
                                                 {item.title}
                                             </h3>
                                             <svg
@@ -200,7 +200,7 @@ export default function About() {
                                         <div
                                             className={`overflow-hidden transition-all duration-300 ${openAccordion === idx ? 'max-h-96' : 'max-h-0'}`}
                                         >
-                                            <div className="px-8 pb-8 text-gray-600 dark:text-gray-400 leading-relaxed whitespace-pre-line">
+                                            <div className="px-4 sm:px-6 md:px-8 pb-6 md:pb-8 text-gray-600 dark:text-gray-400 leading-relaxed whitespace-pre-line text-sm md:text-base">
                                                 {item.content}
                                             </div>
                                         </div>
@@ -221,13 +221,13 @@ export default function About() {
                 <div className="absolute inset-0 bg-black/75"></div>
 
                 {/* Content */}
-                <div className="relative z-10 max-w-7xl mx-auto px-6">
+                <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6 }}
-                        className="text-center mb-16"
+                        className="text-center mb-10 md:mb-16"
                     >
                         {/* Credentials Label */}
                         <div className="text-nijaGreen text-lg font-semibold mb-4 tracking-wider">
@@ -235,7 +235,7 @@ export default function About() {
                         </div>
 
                         {/* Main Heading */}
-                        <h2 className="text-4xl md:text-5xl font-bold text-white">
+                        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white">
                             Work Showcase
                         </h2>
                     </motion.div>
@@ -246,7 +246,7 @@ export default function About() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6, delay: 0.2 }}
-                        className="grid grid-cols-2 md:grid-cols-4 gap-12 md:gap-8"
+                        className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8 lg:gap-12"
                     >
                         {[
                             { value: '4+', label: 'years' },
@@ -268,7 +268,7 @@ export default function About() {
                                 </div>
 
                                 {/* Value */}
-                                <div className="text-nijaGreen text-5xl md:text-7xl font-bold">
+                                <div className="text-nijaGreen text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-bold">
                                     {metric.value}
                                 </div>
                             </motion.div>
@@ -278,15 +278,15 @@ export default function About() {
             </section>
 
             {/* Distributed Economy Section - Educational */}
-            <section className="py-24 bg-gray-50 dark:bg-[#0d1117]">
-                <div className="max-w-7xl mx-auto px-6">
+            <section className="py-16 md:py-24 bg-gray-50 dark:bg-[#0d1117]">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6">
                     {/* Part 1: Introduction Text */}
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6 }}
-                        className="mb-16"
+                        className="mb-10 md:mb-16"
                     >
                         {/* Label */}
                         <span className="inline-block mb-6 px-4 py-1.5 text-sm font-medium rounded-full bg-nijaGreen/10 text-nijaGreen uppercase tracking-wide">
@@ -294,30 +294,30 @@ export default function About() {
                         </span>
 
                         {/* Main Heading */}
-                        <h2 className="text-4xl font-bold mb-4 text-gray-900 dark:text-white">
+                        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 text-gray-900 dark:text-white">
                             What is a Distributed Economy?
                         </h2>
 
                         {/* Body Text */}
-                        <p className="text-lg text-gray-600 dark:text-gray-400 max-w-3xl mb-12">
+                        <p className="text-base md:text-lg text-gray-600 dark:text-gray-400 max-w-3xl mb-8 md:mb-12">
                             A distributed economy is an economic system in which economic activity is distributed across a network of nodes. This means that there is no central authority that controls the economy, and instead, economic decisions are made by individuals and organizations that are part of the network.
                         </p>
 
                         {/* Subheading */}
-                        <h3 className="text-2xl md:text-3xl font-bold text-gray-900 dark:text-white mb-8">
+                        <h3 className="text-xl md:text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white mb-6 md:mb-8">
                             Features of a Distributed Economy
                         </h3>
                     </motion.div>
 
                     {/* Part 2: Image + Accordion */}
-                    <div className="grid lg:grid-cols-2 gap-16 items-start">
+                    <div className="grid lg:grid-cols-2 gap-8 md:gap-16 items-start">
                         {/* Left Side - Static Image */}
                         <motion.div
                             initial={{ opacity: 0, x: -30 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             viewport={{ once: true }}
                             transition={{ duration: 0.6 }}
-                            className="relative h-[500px] lg:sticky lg:top-8"
+                            className="relative h-[300px] md:h-[500px] lg:sticky lg:top-8 hidden md:block"
                         >
                             <div className="rounded-2xl overflow-hidden shadow-xl h-full">
                                 <img
@@ -362,7 +362,7 @@ export default function About() {
                                         onClick={() => setOpenFeatureAccordion(openFeatureAccordion === idx ? -1 : idx)}
                                         className="w-full flex items-center justify-between p-8 text-left transition-colors"
                                     >
-                                        <h4 className="text-xl font-bold text-gray-900 dark:text-white group-hover:text-nijaPurple transition-colors">
+                                        <h4 className="text-lg md:text-xl font-bold text-gray-900 dark:text-white group-hover:text-nijaPurple transition-colors">
                                             {item.title}
                                         </h4>
                                         <svg
@@ -379,7 +379,7 @@ export default function About() {
                                     <div
                                         className={`overflow-hidden transition-all duration-300 ${openFeatureAccordion === idx ? 'max-h-96' : 'max-h-0'}`}
                                     >
-                                        <div className="px-8 pb-8 text-gray-600 dark:text-gray-400 leading-relaxed">
+                                        <div className="px-4 sm:px-6 md:px-8 pb-6 md:pb-8 text-gray-600 dark:text-gray-400 leading-relaxed text-sm md:text-base">
                                             {item.content}
                                         </div>
                                     </div>
@@ -391,8 +391,8 @@ export default function About() {
             </section>
 
             {/* Examples of Distributed Economies Section */}
-            <section className="py-20 bg-gray-50 dark:bg-gray-900">
-                <div className="max-w-6xl mx-auto px-6">
+            <section className="py-16 md:py-20 bg-gray-50 dark:bg-gray-900">
+                <div className="max-w-6xl mx-auto px-4 sm:px-6">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -405,17 +405,17 @@ export default function About() {
                         </span>
 
                         {/* Main Heading */}
-                        <h2 className="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white mb-8 leading-tight">
+                        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6 md:mb-8 leading-tight">
                             Examples of Distributed Economies
                         </h2>
 
                         {/* Intro Text */}
-                        <p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-12">
+                        <p className="text-base md:text-lg text-gray-600 dark:text-gray-300 leading-relaxed mb-8 md:mb-12">
                             There are a number of examples of distributed economies in operation today. These include:
                         </p>
 
                         {/* Examples Grid */}
-                        <div className="grid md:grid-cols-1 gap-8">
+                        <div className="grid md:grid-cols-1 gap-4 md:gap-8">
                             {[
                                 {
                                     title: 'The peer-to-peer (P2P) file sharing network',
@@ -437,12 +437,12 @@ export default function About() {
                                     viewport={{ once: true }}
                                     transition={{ duration: 0.5, delay: idx * 0.1 }}
                                     whileHover={{ y: -4 }}
-                                    className="group bg-white dark:bg-gray-900 p-8 rounded-xl border border-gray-200 dark:border-gray-800 hover:border-nijaGreen dark:hover:border-nijaGreen transition-all duration-300"
+                                    className="group bg-white dark:bg-gray-900 p-5 md:p-8 rounded-xl border border-gray-200 dark:border-gray-800 hover:border-nijaGreen dark:hover:border-nijaGreen transition-all duration-300"
                                 >
-                                    <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-4 group-hover:text-nijaGreen transition-colors">
+                                    <h3 className="text-lg md:text-xl font-bold text-gray-900 dark:text-white mb-3 md:mb-4 group-hover:text-nijaGreen transition-colors">
                                         {example.title}
                                     </h3>
-                                    <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
+                                    <p className="text-gray-600 dark:text-gray-400 leading-relaxed text-sm md:text-base">
                                         {example.description}
                                     </p>
                                 </motion.div>
@@ -454,21 +454,21 @@ export default function About() {
 
             {/* The Future & Conclusion - Combined Section */}
             <section
-                className="relative py-24 bg-cover bg-center"
+                className="relative py-16 md:py-24 bg-cover bg-center"
                 style={{ backgroundImage: 'url(/future-conclusion-bg.png)' }}
             >
                 {/* Dark Overlay */}
                 <div className="absolute inset-0 bg-black/70"></div>
 
                 {/* Content */}
-                <div className="relative z-10 max-w-5xl mx-auto px-6">
+                <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6">
                     {/* The Future Section */}
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6 }}
-                        className="text-center mb-16"
+                        className="text-center mb-10 md:mb-16"
                     >
                         {/* Label */}
                         <span className="inline-block mb-6 px-4 py-1.5 text-sm font-medium rounded-full bg-nijaGreen/10 text-nijaGreen uppercase tracking-wide">
@@ -476,17 +476,17 @@ export default function About() {
                         </span>
 
                         {/* Main Heading */}
-                        <h2 className="text-3xl md:text-5xl font-bold text-white mb-8 leading-tight">
+                        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-6 md:mb-8 leading-tight">
                             The Future of Distributed Economies
                         </h2>
 
                         {/* Body Text */}
-                        <p className="text-lg text-gray-100 leading-relaxed max-w-4xl mx-auto mb-6">
+                        <p className="text-base md:text-lg text-gray-100 leading-relaxed max-w-4xl mx-auto mb-4 md:mb-6">
                             Distributed economies are still in their early stages of development, but they have the potential to revolutionize the way we think about the economy. As technology continues to develop, distributed economies are likely to become more widespread and influential.
                         </p>
 
                         {/* Merged Conclusion Content */}
-                        <p className="text-lg text-gray-100 leading-relaxed max-w-4xl mx-auto">
+                        <p className="text-base md:text-lg text-gray-100 leading-relaxed max-w-4xl mx-auto">
                             Distributed economies offer a number of potential benefits, including decentralization, transparency, efficiency, and sustainability. As technology continues to develop, distributed economies are likely to become more widespread and influential.
                         </p>
                     </motion.div>

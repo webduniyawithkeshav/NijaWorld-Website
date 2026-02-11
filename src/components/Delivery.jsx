@@ -35,8 +35,8 @@ export function Delivery() {
 
     return (
         <section className="pt-4 pb-16 md:pt-8 md:pb-28 bg-gray-50 dark:bg-baseDark overflow-hidden">
-            <div className="max-w-7xl mx-auto px-6">
-                <div className="grid md:grid-cols-2 gap-16 items-center mb-12">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6">
+                <div className="grid md:grid-cols-2 gap-8 md:gap-16 items-center mb-8 md:mb-12">
 
                     {/* Left: Operating Model with Numbered Timeline */}
                     <motion.div
@@ -44,10 +44,10 @@ export function Delivery() {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                     >
-                        <span className="inline-block mb-6 px-8 py-3 text-2xl rounded-full bg-nijaPurple/10 text-nijaPurple font-bold tracking-wide border border-nijaPurple/20">
+                        <span className="inline-block mb-4 md:mb-6 px-4 md:px-8 py-2 md:py-3 text-lg md:text-2xl rounded-full bg-nijaPurple/10 text-nijaPurple font-bold tracking-wide border border-nijaPurple/20">
                             How We Deliver
                         </span>
-                        <h2 className="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+                        <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4 md:mb-6">
                             Delivery model built for reliability and governance
                         </h2>
 
@@ -105,12 +105,12 @@ export function Delivery() {
                         </div>
                     </motion.div>
 
-                    {/* Right: Interactive Image Display - No container, just image */}
+                    {/* Right: Interactive Image Display - Hidden on mobile */}
                     <motion.div
                         initial={{ opacity: 0, x: 40 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
-                        className="relative flex flex-col items-center justify-center pt-28"
+                        className="hidden md:flex relative flex-col items-center justify-center pt-28"
                     >
                         <motion.img
                             key={activeImage}

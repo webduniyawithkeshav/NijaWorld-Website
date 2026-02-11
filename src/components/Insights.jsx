@@ -51,17 +51,17 @@ export function Insights() {
 
     return (
         <section className="pt-8 pb-28 bg-gray-50 dark:bg-baseDark">
-            <div className="max-w-7xl mx-auto px-6">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="text-center mb-16"
+                    className="text-center mb-8 md:mb-16"
                 >
-                    <span className="inline-block mb-6 px-8 py-3 text-2xl rounded-full bg-nijaGreen/10 text-nijaGreen font-bold tracking-wide border border-nijaGreen/20">
+                    <span className="inline-block mb-4 md:mb-6 px-4 md:px-8 py-2 md:py-3 text-lg md:text-2xl rounded-full bg-nijaGreen/10 text-nijaGreen font-bold tracking-wide border border-nijaGreen/20">
                         Latest Insights & Media
                     </span>
-                    <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
                         Research and updates
                     </h2>
                     <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
@@ -70,14 +70,14 @@ export function Insights() {
                 </motion.div>
 
                 {/* Two Column Card Layout - Equal Height */}
-                <div className="grid lg:grid-cols-2 gap-8 mb-12 items-stretch">
+                <div className="grid lg:grid-cols-2 gap-4 md:gap-8 mb-8 md:mb-12 items-stretch">
 
                     {/* Insights Card */}
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="bg-white/50 dark:bg-white/5 backdrop-blur-md border border-gray-200 dark:border-white/10 rounded-2xl p-6 flex flex-col"
+                        className="bg-white/50 dark:bg-white/5 backdrop-blur-md border border-gray-200 dark:border-white/10 rounded-2xl p-6 flex flex-col hover:border-nijaGreen dark:hover:border-nijaGreen hover:border-2 hover:shadow-2xl hover:shadow-nijaGreen/20 transition-all duration-300 card-glow-green"
                     >
                         <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
                             <span className="w-2 h-2 rounded-full bg-nijaGreen"></span>
@@ -118,7 +118,7 @@ export function Insights() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.1 }}
-                        className="bg-white/50 dark:bg-white/5 backdrop-blur-md border border-gray-200 dark:border-white/10 rounded-2xl p-6 flex flex-col"
+                        className="bg-white/50 dark:bg-white/5 backdrop-blur-md border border-gray-200 dark:border-white/10 rounded-2xl p-6 flex flex-col hover:border-nijaGreen dark:hover:border-nijaGreen hover:border-2 hover:shadow-2xl hover:shadow-nijaGreen/20 transition-all duration-300 card-glow-green"
                     >
                         <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
                             <span className="w-2 h-2 rounded-full bg-nijaGreen"></span>

@@ -23,17 +23,17 @@ export function Security() {
 
     return (
         <section className="pt-8 pb-28 bg-gray-50 dark:bg-baseDark">
-            <div className="max-w-7xl mx-auto px-6">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
-                    className="text-center mb-16"
+                    className="text-center mb-8 md:mb-16"
                 >
-                    <span className="inline-block mb-6 px-8 py-3 text-2xl rounded-full bg-nijaPurple/10 text-nijaPurple font-bold tracking-wide border border-nijaPurple/20">
+                    <span className="inline-block mb-4 md:mb-6 px-4 md:px-8 py-2 md:py-3 text-lg md:text-2xl rounded-full bg-nijaPurple/10 text-nijaPurple font-bold tracking-wide border border-nijaPurple/20">
                         Security & Compliance
                     </span>
-                    <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900 dark:text-white">
+                    <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-gray-900 dark:text-white">
                         Security-first by design
                     </h2>
                     <p className="text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
@@ -41,7 +41,7 @@ export function Security() {
                     </p>
                 </motion.div>
 
-                <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-12">
+                <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-8 max-w-5xl mx-auto mb-8 md:mb-12">
                     {features.map((feature, idx) => (
                         <motion.div
                             key={idx}
@@ -54,7 +54,7 @@ export function Security() {
                                 scale: 1.02,
                                 transition: { type: 'spring', stiffness: 300, damping: 20 }
                             }}
-                            className="group bg-white/50 dark:bg-white/5 backdrop-blur-md border border-gray-200 dark:border-white/10 rounded-2xl p-6 hover:border-nijaPurple/50 hover:shadow-2xl hover:shadow-nijaPurple/20 transition-all duration-300"
+                            className="group bg-white/50 dark:bg-white/5 backdrop-blur-md border border-gray-200 dark:border-white/10 rounded-2xl p-6 hover:border-nijaPurple dark:hover:border-nijaPurple hover:border-2 hover:shadow-2xl hover:shadow-nijaPurple/20 transition-all duration-300 card-glow-purple"
                         >
                             {/* Icon */}
                             <div className="mb-5 p-3 rounded-xl bg-nijaPurple/10 w-fit text-nijaPurple group-hover:bg-nijaPurple group-hover:text-white transition-colors duration-300">

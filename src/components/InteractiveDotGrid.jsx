@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
 export function InteractiveDotGrid() {
     const canvasRef = useRef(null);
@@ -7,6 +7,24 @@ export function InteractiveDotGrid() {
     const animationFrameRef = useRef(null);
     const isMobileRef = useRef(false);
     const timeRef = useRef(0);
+    const [isDark, setIsDark] = useState(true);
+
+    // Theme detection effect
+    useEffect(() => {
+        const checkTheme = () => {
+            setIsDark(document.documentElement.classList.contains('dark'));
+        };
+
+        checkTheme();
+
+        const observer = new MutationObserver(checkTheme);
+        observer.observe(document.documentElement, {
+            attributes: true,
+            attributeFilter: ['class']
+        });
+
+        return () => observer.disconnect();
+    }, []);
 
     useEffect(() => {
         const canvas = canvasRef.current;
@@ -172,7 +190,9 @@ export function InteractiveDotGrid() {
             ref={canvasRef}
             className="absolute inset-0 w-full h-full"
             style={{
-                background: 'radial-gradient(ellipse at center, #0d1117 0%, #020409 100%)',
+                background: isDark
+                    ? 'radial-gradient(ellipse at center, #0d1117 0%, #020409 100%)'
+                    : 'radial-gradient(ellipse at center, #ffffff 0%, #f8fafc 100%)',
             }}
         />
     );

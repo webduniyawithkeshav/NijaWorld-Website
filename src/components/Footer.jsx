@@ -33,8 +33,8 @@ export function Footer() {
 
             {/* Newsletter Section */}
             <div className="relative z-10 border-b border-gray-800">
-                <div className="max-w-7xl mx-auto px-6 py-8">
-                    <div className="flex flex-col md:flex-row items-center justify-between gap-6 bg-[#242424] rounded-xl px-8 py-6">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 py-6 md:py-8">
+                    <div className="flex flex-col md:flex-row items-center justify-between gap-4 md:gap-6 bg-[#242424] rounded-xl px-4 sm:px-8 py-4 md:py-6">
                         <div className="flex items-center gap-4">
                             <div className="w-12 h-12 flex items-center justify-center">
                                 <svg className="w-10 h-10 text-nijaGreen" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -68,8 +68,8 @@ export function Footer() {
             </div>
 
             {/* Main Footer Content */}
-            <div className="relative z-10 max-w-7xl mx-auto px-6 py-16">
-                <div className="grid md:grid-cols-3 gap-12 mb-12">
+            <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 py-10 md:py-16">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8 md:gap-12 mb-8 md:mb-12">
 
                     {/* Left: Logo and Social Media */}
                     <div>
